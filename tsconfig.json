@@ -6,7 +6,7 @@
     "paths": {
       "@components/*": ["app/presentation/components/*"],
       "@use-cases/*": ["app/core/use-cases/*"],
-      "@interfaces/*": ["app/interfaces/*"]
+      "@interfaces/*": ["app/interfaces/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -15,10 +15,10 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,

@@ -1,5 +1,6 @@
 export * from './chat-bubbles/chatMessages/chatMessage.component';
 export * from './chat-bubbles/myMessage/myMessage.component';
+export * from './chat-bubbles/gptMessageOrthography/gptMessageOrthography.component';
 
 export * from './sidebarMenuItem/sidebarMenuItem.component';
 
