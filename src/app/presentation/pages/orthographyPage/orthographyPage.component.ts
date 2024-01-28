@@ -41,7 +41,7 @@ export default class OrthographyPageComponent {
       }
     ]
 
-  )
+    )
 
     this.openAiService.checkOrthography(prompt)
     .subscribe(res => {
