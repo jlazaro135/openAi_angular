@@ -23,7 +23,6 @@ import { OpenAiService } from 'app/presentation/services/openai.service';
 })
 export class ChatTemplateComponent {
 
-
   public messages = signal<Message[]>([]);
   public isLoading = signal(false);
   public openAiService = inject(OpenAiService)

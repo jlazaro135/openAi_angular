@@ -26,7 +26,7 @@ export class TextMessageBoxSelectComponent {
 
   @Input() placeholder: string = '';
   @Input() disableCorrections: boolean = false;
-  @Input() options!: Option[];
+  @Input({required: true}) options!: Option[];
   @Output() onMessage = new EventEmitter<TextMessageBoxEvent>();
 
 
@@ -42,8 +42,6 @@ export class TextMessageBoxSelectComponent {
     if( this.form.invalid)return;
 
     const { prompt, selectedOption } = this.form.value;
-
-    console.log({prompt, selectedOption})
 
     this.onMessage.emit({prompt: prompt!, selectedOption: selectedOption!});
     this.form.reset();
