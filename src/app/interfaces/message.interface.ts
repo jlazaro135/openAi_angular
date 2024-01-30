@@ -6,5 +6,6 @@ export interface Message {
     errors: string[];
     message: string;
     correctedText: string
-  }
+  },
+  audioUrl?: string;
 }
