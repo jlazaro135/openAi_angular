@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Message } from '@interfaces/message.interface';
+import { MessageThread } from '@interfaces/messageThread.interface';
 import { audioToTextUseCase, createThreadUseCase, orthographyUseCase, postQuestionUseCase, prosConsStreamUseCase, textToAudioUseCase, translateUseCase } from '@use-cases/index';
 import { prosConsUseCase } from '@use-cases/pros-cons/pros-cons.use-case';
 import { Observable, from, of, tap } from 'rxjs';
@@ -13,8 +15,8 @@ export class OpenAiService {
     return from(orthographyUseCase(prompt));
   }
 
-  checkProsCons(prompt: string){
-    return from(prosConsUseCase(prompt));
+  checkProsCons(messagesThread: MessageThread[]){
+    return from(prosConsUseCase(messagesThread));
   }
 
   ProsConsStream(prompt: string, abortSignal: AbortSignal){
